@@ -1,0 +1,201 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-21T16:57:02.515Z",
+    "end": "2021-11-21T16:57:24.829Z",
+    "duration": 22314,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "dc8573de-94f3-4bdb-8308-8e323cf8bc73",
+      "title": "",
+      "fullFile": "cypress/integration/goodbye-cruel-world.spec.js",
+      "file": "cypress/integration/goodbye-cruel-world.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5032e95a-2a8e-4f4d-a68e-456b156dc5b2",
+          "title": "Regression test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Perform valid login",
+              "fullTitle": "Regression test Perform valid login",
+              "timedOut": null,
+              "duration": 1809,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "websiteHeaderFuncs.logout(cy);",
+              "err": {},
+              "uuid": "7af336ab-d669-40b6-8cc0-629a7fc3f978",
+              "parentUUID": "5032e95a-2a8e-4f4d-a68e-456b156dc5b2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "move through website",
+              "fullTitle": "Regression test move through website",
+              "timedOut": null,
+              "duration": 3536,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "overviewFuncs.navigateRooms(cy);\nroomsfuncs.checkRoomsPage(cy);\nroomsfuncs.navigateNewRooms(cy);\nnewRoomsfuncs.checkNewRoomsPage(cy);\nnewRoomsfuncs.backOut(cy);\nroomsfuncs.backOut(cy);\noverviewFuncs.navigateClients(cy);\nclientsfuncs.checkClientsPage(cy);\nclientsfuncs.navigateNewClients(cy);\nnewClientsfuncs.checkNewClientsPage(cy);\nnewClientsfuncs.backOut(cy);\nclientsfuncs.backOut(cy);\noverviewFuncs.navigateBills(cy);\nbillsfuncs.checkBillsPage(cy);\nbillsfuncs.navigateNewBills(cy);\nnewBillsfunc.checkNewBillsPage(cy);\nnewBillsfunc.backOut(cy);\nbillsfuncs.backOut(cy);\noverviewFuncs.navigateReservations(cy);\nreservationsfunc.checkReservationsPage(cy);\nreservationsfunc.navigateNewReservations(cy);\nnewReservationsfunc.checkNewReservationsPage(cy);\nnewReservationsfunc.backOut(cy);\nreservationsfunc.backOut(cy);\nwebsiteHeaderFuncs.logout(cy);",
+              "err": {},
+              "uuid": "1c170983-a2f0-4551-b7d2-116f1e5a29dd",
+              "parentUUID": "5032e95a-2a8e-4f4d-a68e-456b156dc5b2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "create new client",
+              "fullTitle": "Regression test create new client",
+              "timedOut": null,
+              "duration": 3187,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "overviewFuncs.navigateClients(cy);\nclientsfuncs.navigateNewClients(cy);\nnewClientsfuncs.createNewClient(cy, testdata.newclientname, testdata.newclientmail, testdata.newclientphone);\nclientsfuncs.deleteNewClient(cy);\nwebsiteHeaderFuncs.logout(cy);",
+              "err": {},
+              "uuid": "3030ae14-215a-4b54-9fab-0492ae9e0607",
+              "parentUUID": "5032e95a-2a8e-4f4d-a68e-456b156dc5b2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "create new room",
+              "fullTitle": "Regression test create new room",
+              "timedOut": null,
+              "duration": 2971,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "overviewFuncs.navigateRooms(cy);\nroomsfuncs.navigateNewRooms(cy);\nnewRoomsfuncs.createNewRoom(cy, testdata.newroomfloor, testdata.newroomnumber, testdata.newroomprice);\nroomsfuncs.deleteNewRoom(cy);\nwebsiteHeaderFuncs.logout(cy);",
+              "err": {},
+              "uuid": "8afe710b-3fbb-4ea5-9106-32d7c8bb161e",
+              "parentUUID": "5032e95a-2a8e-4f4d-a68e-456b156dc5b2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "create new bill",
+              "fullTitle": "Regression test create new bill",
+              "timedOut": null,
+              "duration": 2484,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "overviewFuncs.navigateClients(cy); //For some reason it doesn't work to navigate directly to bills, so I've solved it by ordering the program to\nclientsfuncs.backOut(cy); //first enter another room, back out into the overview, and then enter the Billspage\noverviewFuncs.navigateBills(cy);\nbillsfuncs.navigateNewBills(cy);\nnewBillsfunc.createNewBill(cy, testdata.newbillvalue);\nbillsfuncs.deleteNewBill(cy);\nwebsiteHeaderFuncs.logout(cy);",
+              "err": {},
+              "uuid": "5c21fad8-c02b-4b1c-a3ed-16b6afef7c89",
+              "parentUUID": "5032e95a-2a8e-4f4d-a68e-456b156dc5b2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "create new on every page",
+              "fullTitle": "Regression test create new on every page",
+              "timedOut": null,
+              "duration": 7289,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "overviewFuncs.navigateClients(cy);\nclientsfuncs.navigateNewClients(cy);\nnewClientsfuncs.createNewClient(cy, testdata.newclientname, testdata.newclientmail, testdata.newclientphone);\nclientsfuncs.backOut(cy);\noverviewFuncs.navigateRooms(cy);\nroomsfuncs.navigateNewRooms(cy);\nnewRoomsfuncs.createNewRoom(cy, testdata.newroomfloor, testdata.newroomnumber, testdata.newroomprice);\nroomsfuncs.backOut(cy);\noverviewFuncs.navigateBills(cy);\nbillsfuncs.navigateNewBills(cy);\nnewBillsfunc.createNewBill(cy, testdata.newbillvalue);\nbillsfuncs.backOut(cy);\noverviewFuncs.navigateReservations(cy);\nreservationsfunc.navigateNewReservations(cy);\nnewReservationsfunc.createNewReservation(cy, testdata.newreservationstart, testdata.newreservationend, testdata.newreservationclient, testdata.newreservationroom, testdata.newreservationbill);\nreservationsfunc.deleteNewReservation(cy);\nreservationsfunc.backOut(cy);\noverviewFuncs.navigateRooms(cy);\nroomsfuncs.deleteNewRoom(cy);\nroomsfuncs.backOut(cy);\noverviewFuncs.navigateClients(cy);\nclientsfuncs.deleteNewClient(cy);\nclientsfuncs.backOut(cy);\noverviewFuncs.navigateBills(cy);\nbillsfuncs.deleteNewBill(cy);\nbillsfuncs.backOut(cy);\nwebsiteHeaderFuncs.logout(cy);",
+              "err": {},
+              "uuid": "8da2a194-d5c0-4563-ac35-3567c7eae85b",
+              "parentUUID": "5032e95a-2a8e-4f4d-a68e-456b156dc5b2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7af336ab-d669-40b6-8cc0-629a7fc3f978",
+            "1c170983-a2f0-4551-b7d2-116f1e5a29dd",
+            "3030ae14-215a-4b54-9fab-0492ae9e0607",
+            "8afe710b-3fbb-4ea5-9106-32d7c8bb161e",
+            "5c21fad8-c02b-4b1c-a3ed-16b6afef7c89",
+            "8da2a194-d5c0-4563-ac35-3567c7eae85b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 21276,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyy_HHMMss"
+      },
+      "version": "6.0.1"
+    }
+  }
+}
